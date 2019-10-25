@@ -29,6 +29,7 @@ datatransforms={
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 }
+#give the path of your dataset below
 data_dir='hymenoptera_data'
 image_datasets={x:datasets.ImageFolder(os.path.join(data_dir,x ),datatransforms[x])
 for x in ['train','val']
